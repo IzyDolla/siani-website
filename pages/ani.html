@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIANI ANI | Luxury Parfum</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .product-hero {
+            height: 80vh;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+        }
+        
+        .product-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .product-image {
+            width: 50%;
+            text-align: center;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .product-details {
+            width: 45%;
+            padding: 0 20px;
+        }
+        
+        .product-title {
+            font-family: var(--font-primary);
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .product-subtitle {
+            font-family: var(--font-secondary);
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        
+        .product-description {
+            font-family: var(--font-secondary);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .product-price {
+            font-family: var(--font-primary);
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .product-actions {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .quantity {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .quantity button {
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        
+        .quantity input {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            border: 1px solid #000;
+            border-left: none;
+            border-right: none;
+        }
+        
+        .add-to-cart {
+            padding: 12px 30px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            font-family: var(--font-secondary);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .add-to-cart:hover {
+            background-color: var(--gold-color);
+            color: #000;
+        }
+        
+        .product-meta {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        
+        .product-meta p {
+            font-family: var(--font-secondary);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .product-notes {
+            padding: 80px 0;
+        }
+        
+        .notes-title {
+            text-align: center;
+            font-family: var(--font-primary);
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        
+        .notes-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .note {
+            text-align: center;
+            width: 30%;
+        }
+        
+        .note-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--gold-color);
+        }
+        
+        .note h3 {
+            font-family: var(--font-primary);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .note p {
+            font-family: var(--font-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .related-products {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        @media (max-width: 992px) {
+            .product-container {
+                flex-direction: column;
+            }
+            
+            .product-image, .product-details {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 40px;
+            }
+            
+            .notes-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .note {
+                width: 80%;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/siani_logo.png" alt="SIANI">
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">PARFÜMS</a></li>
+                    <li><a href="#">KOLLEKTIONEN</a></li>
+                    <li><a href="#">ENTDECKEN</a></li>
+                    <li><a href="#">GESCHENKIDEEN</a></li>
+                    <li><a href="#">ÜBER SIANI</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Hero Section -->
+    <section class="product-hero">
+        <div class="container product-container">
+            <div class="product-image">
+                <img src="../assets/images/products/ani/ani_main.png" alt="SIANI ANI">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">ANI</h1>
+                <p class="product-subtitle">LUXURY LE PARFUM</p>
+                <p class="product-description">ANI ist eine Hommage an zeitlose Eleganz und Raffinesse. Dieser luxuriöse Duft vereint sonnenverwöhnte Noten mit einem Hauch von Exotik, um ein unvergessliches olfaktorisches Erlebnis zu schaffen. Die perfekte Balance zwischen Wärme und Frische macht ANI zu einem vielseitigen Begleiter für jeden Anlass.</p>
+                <p class="product-description">Jede Flasche ANI wird mit höchster Sorgfalt hergestellt und verkörpert die Essenz von SIANI – Luxus, Qualität und Leidenschaft für außergewöhnliche Düfte.</p>
+                <p class="product-price">€120,00</p>
+                <div class="product-actions">
+                    <div class="quantity">
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                    </div>
+                    <button class="add-to-cart">IN DEN WARENKORB</button>
+                </div>
+                <div class="product-meta">
+                    <p><strong>Volumen:</strong> 30ml</p>
+                    <p><strong>Duftfamilie:</strong> Orientalisch-Blumig</p>
+                    <p><strong>Konzentration:</strong> Eau de Parfum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Notes Section -->
+    <section class="product-notes">
+        <div class="container">
+            <h2 class="notes-title">DUFTKOMPOSITION</h2>
+            <div class="notes-container">
+                <div class="note">
+                    <div class="note-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>KOPFNOTEN</h3>
+                    <p>Bergamotte, Mandarine, Rosa Pfeffer</p>
+                </div>
+                <div class="note">
+                    <div class="note-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>HERZNOTEN</h3>
+                    <p>Jasmin, Orangenblüte, Ylang-Ylang</p>
+                </div>
+                <div class="note">
+                    <div class="note-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>BASISNOTEN</h3>
+                    <p>Sandelholz, Vanille, Moschus, Amber</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="related-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>SIE KÖNNTEN AUCH MÖGEN</h2>
+            </div>
+            <div class="collection-grid">
+                <div class="collection-item">
+                    <img src="../assets/images/products/asra/asra_main.png" alt="SIANI ASRA">
+                    <h3>ASRA</h3>
+                    <p>Die Verkörperung natürlicher Frische</p>
+                    <a href="asra.html" class="btn">ENTDECKEN</a>
+                </div>
+                <div class="collection-item">
+                    <img src="../assets/images/products/lyria/lyria_main.png" alt="SIANI LYRIA">
+                    <h3>LYRIA</h3>
+                    <p>Eine Symphonie aus Tiefe und Klarheit</p>
+                    <a href="lyria.html" class="btn">ENTDECKEN</a>
+                </div>
+                <div class="collection-item">
+                    <img src="../assets/images/products/kyrah/kyrah_main.png" alt="SIANI KYRAH">
+                    <h3>KYRAH</h3>
+                    <p>Die Essenz der Erde in einem Flakon</p>
+                    <a href="kyrah.html" class="btn">ENTDECKEN</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="../assets/images/logo/siani_logo.png" alt="SIANI">
+                <p>Luxuriöse Parfüms, die die Essenz der Natur einfangen</p>
+            </div>
+            <div class="footer-links">
+                <h3>ENTDECKEN</h3>
+                <ul>
+                    <li><a href="#">Alle Parfüms</a></li>
+                    <li><a href="#">Kollektionen</a></li>
+                    <li><a href="#">Geschenksets</a></li>
+                    <li><a href="#">Neuheiten</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>ÜBER UNS</h3>
+                <ul>
+                    <li><a href="#">Unsere Geschichte</a></li>
+                    <li><a href="#">Nachhaltigkeit</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Händlersuche</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>NEWSLETTER</h3>
+                <p>Abonnieren Sie unseren Newsletter und erhalten Sie exklusive Angebote und Neuigkeiten über unsere neuesten Kreationen.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ihre E-Mail-Adresse">
+                    <button type="submit">ABONNIEREN</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 SIANI. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
